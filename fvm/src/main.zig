@@ -84,7 +84,7 @@ pub fn main() !void {
         _ = std.os.linux.sigaction(2, &sa, null);
     }
 
-    const rom = loadRomEmbedd(@embedFile("rom"), arena) catch |err| {
+    const rom = loadRomEmbedd(@embedFile("./2048.fvm"), arena) catch |err| {
         std.debug.print("Error load rom: {}\n", .{err});
         return err;
     };

@@ -1,6 +1,6 @@
 const std = @import("std");
 
-const core = @import("./../../core/core.zig");
+const core = @import("./core/core.zig");
 const OP = core.Opcode;
 const Register = core.Register;
 const Trap = core.Trap;

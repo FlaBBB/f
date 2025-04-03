@@ -2,7 +2,7 @@ const std = @import("std");
 const stdout = std.io.getStdOut().writer();
 const stdin = std.io.getStdIn().reader();
 
-const core = @import("./../../core/core.zig");
+const core = @import("./core/core.zig");
 const Register = core.Register;
 const ConditionFlag = core.ConditionFlag;
 const OP = core.Opcode;
@@ -161,7 +161,7 @@ pub const LC3 = struct {
             const r2V: u16 = self.getReg(r2);
 
             if (self.debug) {
-                std.debug.print("ADD r.{s} r.{s} r.{s}\n", .{ r0.str(), r1.str(), r2.str() }); 
+                std.debug.print("ADD r.{s} r.{s} r.{s}\n", .{ r0.str(), r1.str(), r2.str() });
             }
 
             const r0V, _ = @addWithOverflow(r1V, r2V);
